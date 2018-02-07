@@ -1,0 +1,17 @@
+{
+  "name": "com.chinact.mobile.plugin.app",
+  "version": "1.0.0",
+  "description": "Install App For Android",
+  "cordova": {
+    "id": "com.chinact.mobile.plugin.app",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "Apache-2.0"
+}
