@@ -13,6 +13,13 @@
 		<config-file parent="/*" target="AndroidManifest.xml">
 			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 		</config-file>
+		<config-file parent="/manifest/application" target="AndroidManifest.xml" >
+			<provider android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            	<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+        	</provider>
+		</config-file>
 		<source-file src="src/android/App.java" target-dir="src/com/chinact/mobile/plugin/app" />
+		<resource-file src="src/android/xml/provider_paths.xml" target="res/xml/provider_paths.xml" />
+		<lib-file src="src/android/libs/android-support-v4.jar" />
 	</platform>
 </plugin>
