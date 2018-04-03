@@ -1,6 +1,6 @@
 {
   "name": "com.chinact.mobile.plugin.app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Install&Open Application",
   "cordova": {
     "id": "com.chinact.mobile.plugin.app",
