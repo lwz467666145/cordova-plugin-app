@@ -4,6 +4,7 @@
 	<js-module name="App" src="www/App.js">
 		<clobbers target="navigator.app" />
 	</js-module>
+	<dependency id="cordova-plugin-device" />
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="App">
@@ -21,5 +22,17 @@
 		<source-file src="src/android/App.java" target-dir="src/com/chinact/mobile/plugin/app" />
 		<resource-file src="src/android/xml/provider_paths.xml" target="res/xml/provider_paths.xml" />
 		<framework src="com.android.support:support-v4:24.1.1+" />
+	</platform>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="App">
+				<param name="ios-package" value="App" />
+			</feature>
+		</config-file>
+		<config-file parent="LSApplicationQueriesSchemes" target="*-Info.plist">
+            <array></array>
+        </config-file>
+		<source-file src="src/ios/App.h" />
+		<source-file src="src/ios/App.m" />
 	</platform>
 </plugin>

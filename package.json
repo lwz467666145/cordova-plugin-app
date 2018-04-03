@@ -1,17 +1,19 @@
 {
   "name": "com.chinact.mobile.plugin.app",
   "version": "1.0.0",
-  "description": "Install App For Android",
+  "description": "Install&Open Application",
   "cordova": {
     "id": "com.chinact.mobile.plugin.app",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "cordova-ios"
   ],
-  "author": "",
+  "author": "Dante Lee",
   "license": "Apache-2.0"
 }

@@ -12,6 +12,7 @@ import org.json.JSONException;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -41,7 +42,20 @@ public class App extends CordovaPlugin {
                 intent.setDataAndType(contentUri, "application/vnd.android.package-archive");
             } else
                 intent.setDataAndType(Uri.fromFile(new File(cordovaActivity.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), name)), "application/vnd.android.package-archive");
-            cordovaActivity.startActivity(intent); 
+            cordovaActivity.startActivity(intent);
+        } else if ("openApp".equals(action)) {
+            String packagei = data.getString(0);
+            PackageManager packageManager = cordova.getActivity().getPackageManager();
+            Intent intent = packageManager.getLaunchIntentForPackage(packagei);
+            if (intent != null)
+                cordova.getActivity().startActivity(intent);
+            else
+                callbackContext.error("Not Install");
+        } else if ("hasApp".equals(action)) {
+            String packagei = data.getString(0);
+            PackageManager packageManager = cordova.getActivity().getPackageManager();
+            Intent intent = packageManager.getLaunchIntentForPackage(packagei);
+            callbackContext.success(String.valueOf(intent != null));
         }
         return true;
     }
