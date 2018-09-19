@@ -13,6 +13,7 @@
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml">
 			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 		</config-file>
 		<config-file parent="/manifest/application" target="AndroidManifest.xml" >
 			<provider android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
