@@ -18,3 +18,7 @@ exports.hasApp = function (package, scheme, success) {
     else
         exec(success, null, 'App', 'hasApp', [scheme]);
 };
+
+exports.exitApp = function () {
+    exec(null, null, 'App', 'exitApp', []);
+};

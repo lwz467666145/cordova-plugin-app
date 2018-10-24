@@ -56,7 +56,8 @@ public class App extends CordovaPlugin {
             PackageManager packageManager = cordova.getActivity().getPackageManager();
             Intent intent = packageManager.getLaunchIntentForPackage(packagei);
             callbackContext.success(String.valueOf(intent != null));
-        }
+        } else if ("exitApp".equals(action))
+            this.webView.getPluginManager().postMessage("exit", null);
         return true;
     }
 

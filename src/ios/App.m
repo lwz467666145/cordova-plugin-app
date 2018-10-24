@@ -23,5 +23,9 @@
     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:flag];
     [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
+
+- (void)exitApp:(CDVInvokedUrlCommand *)command{
+    exit(0);
+}
     
 @end
