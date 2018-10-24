@@ -33,3 +33,8 @@ navigator.app.hasApp(package, scheme, function (flag) {
     // flag - true: 已安装; false: 未安装
 });
 ```
+
+### exitApp 退出当前应用
+```javascript
+navigator.app.exitApp();
+```
