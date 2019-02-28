@@ -30,9 +30,21 @@
 				<param name="ios-package" value="App" />
 			</feature>
 		</config-file>
-		<config-file parent="LSApplicationQueriesSchemes" target="*-Info.plist">
-            <array></array>
-        </config-file>
+		<config-file parent="NSCameraUsageDescription" target="*-Info.plist">
+            		<string>请点击'好'以允许访问。</string>
+        	</config-file>
+		<config-file parent="NSPhotoLibraryUsageDescription" target="*-Info.plist">
+			<string>请点击'好'以允许访问。</string>
+		</config-file>
+		<config-file parent="NSPhotoLibraryAddUsageDescription" target="*-Info.plist">
+			<string>请点击'好'以允许访问。</string>
+		</config-file>
+		<config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+			<string>请点击'好'以允许访问。</string>
+		</config-file>
+		<config-file parent="CFBundleSignature" target="*-Info.plist">
+			<string>CTSJ</string>
+		</config-file>
 		<source-file src="src/ios/App.h" />
 		<source-file src="src/ios/App.m" />
 	</platform>
